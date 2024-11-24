@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import _default from "../../themes/default";
 
 export const Container = styled.div`
   background: linear-gradient(
@@ -37,6 +36,7 @@ export const Title = styled.div`
   font-weight: 600;
   margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
+
   @media (max-width: 768px) {
     margin-top: 12px;
     font-size: 32px;
@@ -48,6 +48,7 @@ export const Desc = styled.div`
   text-align: center;
   max-width: 600px;
   color: ${({ theme }) => theme.text_secondary};
+
   @media (max-width: 768px) {
     margin-bottom: 12px;
     margin-top: 12px;
@@ -60,20 +61,23 @@ export const Divider = styled.div`
 `;
 
 export const CardContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 28px;
-  flex-wrap: wrap;
-  margin-top: 12px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 32px;
-  grid-auto-rows: minmax(100px, auto);
+  margin-top: 12px;
+
   @media (max-width: 960px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 24px;
   }
+
   @media (max-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+  }
+
+  @media (max-width: 480px) {
     grid-template-columns: repeat(1, 1fr);
+    grid-gap: 12px;
   }
 `;

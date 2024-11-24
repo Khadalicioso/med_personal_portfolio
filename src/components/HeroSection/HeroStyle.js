@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import _default from "../../themes/default";
 
 export const HeroContainer = styled.div`
   background: ${({ theme }) => theme.card_light};
@@ -10,11 +9,10 @@ export const HeroContainer = styled.div`
   @media (max-width: 960px) {
     padding: 66px 16px;
   }
-  @media (max-width: 640) {
+  @media (max-width: 640px) {
     padding: 32px 16px;
   }
   z-index: 1;
-
   clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
 
@@ -28,17 +26,18 @@ export const HeroBg = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  max-width: 1360px;
+  max-width: 1440px;
   overflow: hidden;
-  padding: 0 30px;
+  padding: 55px 10px;
   top: 50%;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-
   @media (max-width: 960px) {
+    width: 100%;
+    height: 100%;
     justify-content: center;
-    padding: 0 0px;
+    padding: 0;
   }
 `;
 
@@ -48,12 +47,12 @@ export const HeroInnerContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1100px;
-
+  max-width: 1200px;
   @media (max-width: 960px) {
     flex-direction: column;
   }
 `;
+
 export const HeroLeftContainer = styled.div`
   width: 100%;
   order: 1;
@@ -64,7 +63,6 @@ export const HeroLeftContainer = styled.div`
     flex-direction: column;
     align-items: center;
   }
-
   @media (max-width: 640px) {
     order: 2;
     margin-bottom: 30px;
@@ -86,7 +84,6 @@ export const HeroRightContainer = styled.div`
     align-items: center;
     margin-bottom: 80px;
   }
-
   @media (max-width: 640px) {
     margin-bottom: 30px;
   }
@@ -96,10 +93,11 @@ export const Img = styled.img`
   position: relative;
   width: 100%;
   height: 100%;
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 375px;
+  max-height: 375px;
   border-radius: 50%;
   border: 2px solid ${({ theme }) => theme.primary};
+  animation: float 4s ease-in-out infinite;
 
   @media (max-width: 768px) {
     max-width: 400px;
@@ -109,6 +107,18 @@ export const Img = styled.img`
   @media (max-width: 640px) {
     max-width: 280px;
     max-height: 280px;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-25px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
 `;
 
@@ -120,7 +130,6 @@ export const Title = styled.div`
   @media (max-width: 960px) {
     text-align: center;
   }
-
   @media (max-width: 640px) {
     font-size: 40px;
     line-height: 48px;
@@ -155,11 +164,9 @@ export const SubTitle = styled.div`
   line-height: 32px;
   margin-bottom: 42px;
   color: ${({ theme }) => theme.text_primary + 95};
-
   @media (max-width: 960px) {
     text-align: center;
   }
-
   @media (max-width: 640px) {
     font-size: 16px;
     line-height: 32px;
@@ -167,37 +174,63 @@ export const SubTitle = styled.div`
 `;
 
 export const ResumeButton = styled.a`
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    text-decoration: none;
-    width: 95%;
-    max-width: 300px;
-    text-align: center;
-    padding: 16px 0;
-    color:${({ theme }) => theme.white};
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 600;
-    transition: all 0.2s ease-in-out !important;
-    background: hsla(271, 100%, 50%, 1);
-    background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    box-shadow:  20px 20px 60px #1F2634,
-    -20px -20px 60px #1F2634;
-    &:hover {
-        transform: scale(1.05);
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  width: 95%;
+  max-width: 300px;
+  text-align: center;
+  padding: 16px 0;
+  color: ${({ theme }) => theme.white};
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out !important;
+  background: hsla(271, 100%, 50%, 1);
+  background: linear-gradient(
+    225deg,
+    hsla(271, 100%, 50%, 1) 0%,
+    hsla(294, 100%, 50%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    225deg,
+    hsla(271, 100%, 50%, 1) 0%,
+    hsla(294, 100%, 50%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    225deg,
+    hsla(271, 100%, 50%, 1) 0%,
+    hsla(294, 100%, 50%, 1) 100%
+  );
+  box-shadow: 20px 20px 60px #1f2634, -20px -20px 60px #1f2634;
+  &:hover {
+    transform: scale(1.05);
     transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
+    box-shadow: 20px 20px 60px #1f2634, -20px -20px 60px #1f2634;
     filter: brightness(1);
-    }    
-    
-    
-    @media (max-width: 640px) {
-        padding: 12px 0;
-        font-size: 18px;
-    } 
-
+  }
+  @media (max-width: 640px) {
+    padding: 12px 0;
+    font-size: 18px;
+  }
 `;
+
+const SocialMediaIcons = styled.div`
+  display: flex;
+  justify-content: start;
+  gap: 12px;
+  margin-top: 16px;
+  margin-bottom: 42px;
+`;
+const SocialMediaIcon = styled.a`
+  display: inline-block;
+  font-size: 32px; /* Increase this value to make the icons larger */
+  color: ${({ theme }) => theme.text_primary};
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: ${({ theme }) => theme.primary};
+  }
+`;
+export { SocialMediaIcons, SocialMediaIcon };

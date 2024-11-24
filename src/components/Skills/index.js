@@ -49,62 +49,39 @@ export const Desc = styled.div`
 
 const SkillsContainer = styled.div`
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
   margin-top: 30px;
-  gap: 30px;
   justify-content: center;
-`;
-
-const Skill = styled.div`
-  width: 100%;
-  max-width: 100%;
-  background: ${({ theme }) => theme.card};
-  border: 0.1px solid #854ce6;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
-  border-radius: 16px;
-  padding: 18px 36px;
-  @media (max-width: 768px) {
-    max-width: 400px;
-    padding: 10px 36px;
-  }
-  @media (max-width: 500px) {
-    max-width: 330px;
-    padding: 10px 36px;
-  }
-`;
-
-const SkillList = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
 `;
 
 const SkillItem = styled.div`
-  font-size: 16px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 80};
-  border: 1px solid ${({ theme }) => theme.text_primary + 80};
-  border-radius: 12px;
-  padding: 12px 16px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  @media (max-width: 768px) {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-  @media (max-width: 500px) {
-    font-size: 14px;
-    padding: 6px 12px;
+  background: ${({ theme }) => theme.card};
+  border: 2px solid ${({ theme }) => theme.primary};
+  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
   }
 `;
 
 const SkillImage = styled.img`
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+`;
+
+const SkillName = styled.div`
+  font-size: 16px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_primary};
 `;
 
 const Skills = () => {
@@ -114,17 +91,11 @@ const Skills = () => {
         <Title>Skills.</Title>
         <Desc>Technologies</Desc>
         <SkillsContainer>
-          {skills.map((skill) => (
-            <Skill>
-              <SkillList>
-                {skill.skills.map((item) => (
-                  <SkillItem>
-                    <SkillImage src={item.image} />
-                    {item.name}
-                  </SkillItem>
-                ))}
-              </SkillList>
-            </Skill>
+          {skills[0].skills.map((item) => (
+            <SkillItem key={item.name}>
+              <SkillImage src={item.image} alt={item.name} />
+              <SkillName>{item.name}</SkillName>
+            </SkillItem>
           ))}
         </SkillsContainer>
       </Wrapper>
