@@ -9,6 +9,11 @@ const Container = styled.div`
   position: relative;
   z-index: 1;
   align-items: center;
+  padding: 0 16px;
+
+  @media (min-width: 961px) {
+    padding: 0;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -26,9 +31,9 @@ const Wrapper = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: 42px;
+  font-size: 50px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 900;
   margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
@@ -36,7 +41,6 @@ export const Title = styled.div`
     font-size: 32px;
   }
 `;
-
 export const Desc = styled.div`
   font-size: 18px;
   text-align: center;
@@ -50,10 +54,22 @@ export const Desc = styled.div`
 const SkillsContainer = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  border: 2px solid ${({ theme }) => theme.primary};
+  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  border-radius: 16px;
+  padding: 50px;
+  gap: 25px;
   margin-top: 30px;
   justify-content: center;
+
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const SkillItem = styled.div`
@@ -66,9 +82,10 @@ const SkillItem = styled.div`
   border-radius: 16px;
   padding: 20px;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease-in-out;
+  cursor: pointer;
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
   }
 `;
 
@@ -80,7 +97,7 @@ const SkillImage = styled.img`
 
 const SkillName = styled.div`
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 900;
   color: ${({ theme }) => theme.text_primary};
 `;
 
@@ -89,7 +106,7 @@ const Skills = () => {
     <Container id="skills">
       <Wrapper>
         <Title>Skills.</Title>
-        <Desc>Technologies</Desc>
+        <Desc>TECHNOLOGIES</Desc>
         <SkillsContainer>
           {skills[0].skills.map((item) => (
             <SkillItem key={item.name}>

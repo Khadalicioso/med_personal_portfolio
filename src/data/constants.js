@@ -45,7 +45,7 @@ export const skills = [
         image: CSS,
       },
       {
-        name: "JavaScript",
+        name: "Javascript",
         image: JAVASCRIPT,
       },
       {
@@ -57,19 +57,19 @@ export const skills = [
         image: TAILWIND,
       },
       {
-        name: "React Js",
+        name: "React JS",
         image: REACT,
       },
       {
-        name: "Vue Js",
+        name: "Vue JS",
         image: VUE,
       },
       {
-        name: "Next Js",
+        name: "Next JS",
         image: NEXT,
       },
       {
-        name: "Node Js",
+        name: "Node JS",
         image: NODEJS,
       },
       {
@@ -160,7 +160,7 @@ export const projects = [
   {
     id: 3,
     title: "Hotel Booking WebApp",
-    date: "August 2024",
+    date: "September 2024",
     description:
       "Full Stack Hotel Booking WebApp using HTML, CSS, JavaScript, PHP, and MySQL",
     image: HotelBookingWebApp,
@@ -182,7 +182,7 @@ export const projects = [
   {
     id: 5,
     title: "Netflix Clone",
-    date: "September 2024",
+    date: "November 2024",
     description: "Full Stack Netflix Clone using React JS, Firebase",
     image: NetflixClone,
     tags: ["React JS", "Firebase", "API"],

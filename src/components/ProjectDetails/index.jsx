@@ -33,7 +33,7 @@ const Wrapper = styled.div`
 
 const Title = styled.div`
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 900;
   color: ${({ theme }) => theme.text_primary};
   margin: 8px 6px 0px 6px;
   @media only screen and (max-width: 600px) {

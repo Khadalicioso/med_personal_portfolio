@@ -1,5 +1,4 @@
 import React from "react";
-import HeroBgAnimation from "../HeroBgAnimation";
 import {
   HeroContainer,
   HeroBg,
@@ -21,10 +20,22 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Bio } from "../../data/constants";
+import HeroBgAnimation from "../HeroBgAnimation"; // Ensure this import is correct
 
 const HeroSection = () => {
+  const helloText = "Hello, I'm";
+  const nameText = `${Bio.name},`;
+
+  const splitText = (text) => {
+    return text
+      .split("")
+      .map((char, index) => (
+        <span key={index}>{char === " " ? "\u00A0" : char}</span>
+      ));
+  };
+
   return (
-    <div id="about">
+    <div id="home">
       <HeroContainer>
         <HeroBg>
           <HeroBgAnimation />
@@ -32,7 +43,8 @@ const HeroSection = () => {
         <HeroInnerContainer>
           <HeroLeftContainer id="Left">
             <Title>
-              Hello, <br /> I'm {Bio.name},
+              <div>{splitText(helloText)}</div>
+              <div>{splitText(nameText)}</div>
             </Title>
             <TextLoop>
               <Span>

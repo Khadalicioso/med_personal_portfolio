@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Nav,
   NavLink,
@@ -20,6 +20,21 @@ import { useTheme } from "styled-components";
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const theme = useTheme();
+
+  // useEffect hook to handle window resize event
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768 && isOpen) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isOpen]);
+
   return (
     <Nav>
       <NavbarContainer>
@@ -45,7 +60,7 @@ const Navbar = () => {
           />
         </MobileIcon>
         <NavItems>
-          <NavLink href="#about">ABOUT</NavLink>
+          <NavLink href="#home">HOME</NavLink>
           <NavLink href="#skills">SKILL</NavLink>
           <NavLink href="#experience">EXPERIENCE</NavLink>
           <NavLink href="#projects">PROJECT</NavLink>
@@ -58,12 +73,12 @@ const Navbar = () => {
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
             <MobileLink
-              href="#about"
+              href="#home"
               onClick={() => {
                 setIsOpen(!isOpen);
               }}
             >
-              ABOUT
+              HOME
             </MobileLink>
             <MobileLink
               href="#skills"

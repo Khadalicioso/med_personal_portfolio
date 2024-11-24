@@ -15,6 +15,7 @@ export const Nav = styled.div`
     transition: 0.8s all ease;
   }
 `;
+
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -37,11 +38,13 @@ export const NavLogo = styled(LinkR)`
     padding: 0 0px;
   }
 `;
+
 export const Span = styled.div`
   padding: 0 4px;
   font-weight: bold;
   font-size: 18px;
 `;
+
 export const NavItems = styled.ul`
   width: 100%;
   display: flex;
@@ -58,14 +61,14 @@ export const NavItems = styled.ul`
 
 export const NavLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
-  font-weight: 500;
+  font-weight: 900;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.4s ease-in-out, transform 0.4s ease-in-out;
   text-decoration: none;
-  :hover {
+  &:hover {
     color: ${({ theme }) => theme.primary};
+    transform: scale(1.2);
   }
-
   &.active {
     border-bottom: 2px solid ${({ theme }) => theme.primary};
   }
@@ -81,10 +84,10 @@ export const GitHubButton = styled.a`
   color: ${({ theme }) => theme.primary};
   cursor: pointer;
   padding: 0 20px;
-  font-weight: 500;
+  font-weight: 900;
   text-decoration: none;
   font-size: 16px;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.5s ease-in-out;
   :hover {
     background: ${({ theme }) => theme.primary};
     color: ${({ theme }) => theme.white};
@@ -153,14 +156,14 @@ export const MobileMenuItems = styled.ul`
 
 export const MobileMenuLink = styled(LinkR)`
   color: ${({ theme }) => theme.text_primary};
-  font-weight: 500;
+  font-weight: 900;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
   text-decoration: none;
-  :hover {
+  &:hover {
     color: ${({ theme }) => theme.primary};
+    transform: scale(1.2);
   }
-
   &.active {
     border-bottom: 2px solid ${({ theme }) => theme.primary};
   }
@@ -176,7 +179,7 @@ export const MobileMenuButton = styled.a`
   color: ${({ theme }) => theme.primary};
   cursor: pointer;
   padding: 0 20px;
-  font-weight: 500;
+  font-weight: 900;
   text-decoration: none;
   font-size: 16px;
   transition: all 0.6s ease-in-out;
@@ -189,12 +192,14 @@ export const MobileMenuButton = styled.a`
 
 export const MobileLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
-  font-weight: 500;
+  font-weight: 900;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
   text-decoration: none;
-  :hover {
+
+  &:hover {
     color: ${({ theme }) => theme.primary};
+    transform: scale(1.2);
   }
 
   &.active {

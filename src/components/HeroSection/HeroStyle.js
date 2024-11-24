@@ -97,7 +97,7 @@ export const Img = styled.img`
   max-height: 375px;
   border-radius: 50%;
   border: 2px solid ${({ theme }) => theme.primary};
-  animation: float 4s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite;
 
   @media (max-width: 768px) {
     max-width: 400px;
@@ -123,17 +123,68 @@ export const Img = styled.img`
 `;
 
 export const Title = styled.div`
-  font-weight: 700;
+  font-weight: 900;
   font-size: 50px;
   color: ${({ theme }) => theme.text_primary};
   line-height: 68px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  white-space: nowrap;
+  cursor: pointer;
+
   @media (max-width: 960px) {
-    text-align: center;
-  }
-  @media (max-width: 640px) {
     font-size: 40px;
     line-height: 48px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 32px;
+    line-height: 40px;
     margin-bottom: 8px;
+  }
+
+  span {
+    display: inline-block;
+    transition: transform 0.5s ease-in-out, background 0.5s ease-in-out,
+      color 0.5s ease-in-out;
+
+    &:hover {
+      animation: wave 0.5s ease-in-out infinite;
+    }
+  }
+
+  @keyframes wave {
+    0% {
+      transform: translateY(0%);
+      background: linear-gradient(
+        225deg,
+        hsla(271, 100%, 50%, 1) 0%,
+        hsla(294, 100%, 50%, 1) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    25% {
+      transform: translateY(-20%);
+    }
+    50% {
+      transform: translateY(0%);
+    }
+    75% {
+      transform: translateY(20%);
+    }
+    100% {
+      transform: translateY(0%);
+      background: linear-gradient(
+        225deg,
+        hsla(271, 100%, 50%, 1) 0%,
+        hsla(294, 100%, 50%, 1) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 `;
 
@@ -186,7 +237,7 @@ export const ResumeButton = styled.a`
   border-radius: 20px;
   cursor: pointer;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 900;
   transition: all 0.2s ease-in-out !important;
   background: hsla(271, 100%, 50%, 1);
   background: linear-gradient(
@@ -224,13 +275,16 @@ const SocialMediaIcons = styled.div`
   margin-top: 16px;
   margin-bottom: 42px;
 `;
+
 const SocialMediaIcon = styled.a`
   display: inline-block;
-  font-size: 32px; /* Increase this value to make the icons larger */
+  font-size: 32px;
   color: ${({ theme }) => theme.text_primary};
-  transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
   &:hover {
     color: ${({ theme }) => theme.primary};
+    transform: scale(1.2);
   }
 `;
+
 export { SocialMediaIcons, SocialMediaIcon };

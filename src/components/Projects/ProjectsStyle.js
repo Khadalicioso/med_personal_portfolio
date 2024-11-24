@@ -33,7 +33,7 @@ export const Wrapper = styled.div`
 export const Title = styled.div`
   font-size: 42px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 900;
   margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
 
@@ -47,6 +47,7 @@ export const Desc = styled.div`
   font-size: 18px;
   text-align: center;
   max-width: 600px;
+  margin-bottom: 20px;
   color: ${({ theme }) => theme.text_secondary};
 
   @media (max-width: 768px) {
