@@ -12,7 +12,7 @@ import {
   MobileMenu,
   MobileLink,
 } from "./NavbarStyledComponent";
-import { DiCssdeck } from "react-icons/di";
+import { VscCode } from "react-icons/vsc";
 import { FaBars } from "react-icons/fa";
 import { Bio } from "../../data/constants";
 import { useTheme } from "styled-components";
@@ -33,7 +33,7 @@ const Navbar = () => {
                 cursor: "pointer",
               }}
             >
-              <DiCssdeck size="3rem" /> <Span>Miguel Enrique</Span>
+              <VscCode size="3rem" /> <Span>Miguel Enrique</Span>
             </div>
           </NavLink>
         </NavLogo>

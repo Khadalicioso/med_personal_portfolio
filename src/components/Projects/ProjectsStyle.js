@@ -61,23 +61,9 @@ export const Divider = styled.div`
 `;
 
 export const CardContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 32px;
-  margin-top: 12px;
-
-  @media (max-width: 960px) {
-    grid-template-columns: repeat(2, 1fr)
-    grid-gap: 24px;
-  }
-
-  @media (max-width: 640px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 16px;
-  }
-
-  @media (max-width: 480px) {
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 12px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
 `;
