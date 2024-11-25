@@ -4,6 +4,8 @@ import BookstoreWebApp from "../images/BookstoreWebApp.jpg";
 import HotelBookingWebApp from "../images/HotelBookingWebApp.jpg";
 import RestaurantWebApp from "../images/RestaurantWebApp.jpg";
 import NetflixClone from "../images/NetflixClone.jpg";
+import KopibaraCoffeeShop from "../images/KopibaraCoffeeShop.jpg";
+import LandingPages from "../images/LandingPages.jpg";
 import HTML from "../images/HTML5.png";
 import CSS from "../images/CSS3.png";
 import BOOTSTRAP from "../images/BOOTSTRAP.png";
@@ -137,6 +139,24 @@ export const projects = [
   },
   {
     id: 1,
+    title: "Website: Landing Pages",
+    date: "June 2024 - Present",
+    description:
+      "I specialize in crafting stunning, high-performance landing pages that captivate the audiences and drive conversions. As a skilled web developer, I leverage the latest technologies like HTML, CSS, and JavaScript to create visually appealing and user-friendly experiences. I utilize powerful frameworks such as Bootstrap and Tailwind CSS to streamline development and ensure consistent branding across all devices. For dynamic and interactive elements, I employ React to build robust and scalable front-end applications.",
+    image: LandingPages,
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "Tailwind CSS",
+      "React JS",
+    ],
+    source: "https://github.com/Khadalicioso/Websites",
+    demo: "",
+  },
+  {
+    id: 2,
     title: "Blog WebApp",
     date: "August 2024",
     description:
@@ -147,7 +167,7 @@ export const projects = [
     demo: "",
   },
   {
-    id: 2,
+    id: 3,
     title: "Book Store WebApp",
     date: "August 2024",
     description:
@@ -158,7 +178,7 @@ export const projects = [
     demo: "",
   },
   {
-    id: 3,
+    id: 4,
     title: "Hotel Booking WebApp",
     date: "September 2024",
     description:
@@ -169,18 +189,29 @@ export const projects = [
     demo: "",
   },
   {
-    id: 4,
+    id: 5,
     title: "Restaurant WebApp",
     date: "September 2024",
     description:
-      "Full Stack Restaurant WebApp using HTML, CSS, JavaScript, PHP, and MySQL",
+      "A Full Stack Restaurant Food Ordering Web Appllication using HTML, CSS, JavaScript, PHP, and MySQL",
     image: RestaurantWebApp,
     tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     source: "",
     demo: "",
   },
   {
-    id: 5,
+    id: 6,
+    title: "Kopibara",
+    date: "September 2024 - On Process",
+    description:
+      "A Coffee Ordering Web Application built with ASP.NET MVC, leveraging Microsoft SQL Server as the database, an API for Google Authentication, Entity Framework for data access, and Paymongo for secure payment processing.",
+    image: KopibaraCoffeeShop,
+    tags: ["ASP.NET", "MVC", "API", "MsSQL", "Entity Framework"],
+    source: "",
+    demo: "",
+  },
+  {
+    id: 7,
     title: "Netflix Clone",
     date: "November 2024",
     description: "Full Stack Netflix Clone using React JS, Firebase",

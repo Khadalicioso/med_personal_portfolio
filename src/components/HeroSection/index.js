@@ -20,7 +20,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Bio } from "../../data/constants";
-import HeroBgAnimation from "../HeroBgAnimation"; // Ensure this import is correct
+import HeroBgAnimation from "../HeroBgAnimation";
 
 const HeroSection = () => {
   const helloText = "Hello, I'm";
@@ -70,7 +70,7 @@ const HeroSection = () => {
               </SocialMediaIcon>
             </SocialMediaIcons>
             <ResumeButton href={Bio.resume} target="display">
-              Resume
+              Résumé
             </ResumeButton>
           </HeroLeftContainer>
           <HeroRightContainer id="Right">

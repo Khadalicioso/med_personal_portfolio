@@ -67,7 +67,7 @@ const Navbar = () => {
         </NavItems>
         <ButtonContainer>
           <GitHubButton href={Bio.github} target="_blank">
-            Github
+            GITHUB
           </GitHubButton>
         </ButtonContainer>
         {isOpen && (
@@ -114,7 +114,7 @@ const Navbar = () => {
               href={Bio.github}
               target="_blank"
             >
-              Github
+              GITHUB
             </GitHubButton>
           </MobileMenu>
         )}
