@@ -22,6 +22,7 @@ import FIREBASE from "../images/FIREBASE.png";
 import GIT from "../images/GIT.png";
 import GITHUB from "../images/GITHUB.png";
 import ASP from "../images/ASP.png";
+import TYPESCRIPT from "../images/TYPESCRIPT.png";
 
 export const Bio = {
   name: "Miguel Enrique",
@@ -65,6 +66,10 @@ export const skills = [
       {
         name: "Vue JS",
         image: VUE,
+      },
+      {
+        name: "Typescript",
+        image: TYPESCRIPT,
       },
       {
         name: "Next JS",
@@ -163,7 +168,7 @@ export const projects = [
       "Full Stack Blog WebApp using HTML, CSS, JavaScript, PHP, and MySQL",
     image: BlogWebApp,
     tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    source: "",
+    source: "https://github.com/Khadalicioso/Full__Stack__Projects",
     demo: "",
   },
   {
@@ -174,7 +179,7 @@ export const projects = [
       "Full Stack Book Store WebApp using HTML, CSS, JavaScript, PHP, and MySQL",
     image: BookstoreWebApp,
     tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    source: "",
+    source: "https://github.com/Khadalicioso/Full__Stack__Projects",
     demo: "",
   },
   {
@@ -185,7 +190,7 @@ export const projects = [
       "Full Stack Hotel Booking WebApp using HTML, CSS, JavaScript, PHP, and MySQL",
     image: HotelBookingWebApp,
     tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    source: "",
+    source: "https://github.com/Khadalicioso/Full__Stack__Projects",
     demo: "",
   },
   {
@@ -196,7 +201,7 @@ export const projects = [
       "A Full Stack Restaurant Food Ordering Web Appllication using HTML, CSS, JavaScript, PHP, and MySQL",
     image: RestaurantWebApp,
     tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    source: "",
+    source: "https://github.com/Khadalicioso/Full__Stack__Projects",
     demo: "",
   },
   {
@@ -217,7 +222,7 @@ export const projects = [
     description: "Full Stack Netflix Clone using React JS, Firebase",
     image: NetflixClone,
     tags: ["React JS", "Firebase", "API"],
-    source: "",
+    source: "https://github.com/Khadalicioso/Full__Stack__Projects",
     demo: "",
   },
 ];

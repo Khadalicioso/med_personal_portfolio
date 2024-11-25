@@ -60,7 +60,7 @@ const Navbar = () => {
           />
         </MobileIcon>
         <NavItems>
-          <NavLink href="#home">HOME</NavLink>
+          <NavLink href="#about">ABOUT</NavLink>
           <NavLink href="#skills">SKILL</NavLink>
           <NavLink href="#experience">EXPERIENCE</NavLink>
           <NavLink href="#projects">PROJECT</NavLink>
@@ -73,12 +73,12 @@ const Navbar = () => {
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
             <MobileLink
-              href="#home"
+              href="#about"
               onClick={() => {
                 setIsOpen(!isOpen);
               }}
             >
-              HOME
+              ABOUT
             </MobileLink>
             <MobileLink
               href="#skills"

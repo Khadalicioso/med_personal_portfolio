@@ -35,7 +35,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div id="home">
+    <div id="about">
       <HeroContainer>
         <HeroBg>
           <HeroBgAnimation />
