@@ -6,6 +6,7 @@ import RestaurantWebApp from "../images/RestaurantWebApp.jpg";
 import NetflixClone from "../images/NetflixClone.jpg";
 import KopibaraCoffeeShop from "../images/KopibaraCoffeeShop.jpg";
 import LandingPages from "../images/LandingPages.jpg";
+import HealthCare from "../images/HealthCare.jpg";
 import HTML from "../images/HTML5.png";
 import CSS from "../images/CSS3.png";
 import BOOTSTRAP from "../images/BOOTSTRAP.png";
@@ -162,10 +163,10 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Blog WebApp",
+    title: "Simple Blog WebApp",
     date: "August 2024",
     description:
-      "Full Stack Blog WebApp using HTML, CSS, JavaScript, PHP, and MySQL",
+      "Built with HTML, CSS, JavaScript, PHP, and MySQL, this Blog WebApp is more than just a digital diary. It's a platform for sharing thoughts, ideas, and stories with the world. Explore a diverse range of topics, from technology and culture to personal experiences and creative endeavors.",
     image: BlogWebApp,
     tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     source: "https://github.com/Khadalicioso/Full__Stack__Projects",
@@ -173,10 +174,10 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Book Store WebApp",
+    title: "Simple Book Store WebApp",
     date: "August 2024",
     description:
-      "Full Stack Book Store WebApp using HTML, CSS, JavaScript, PHP, and MySQL",
+      "Built with HTML, CSS, JavaScript, PHP, and MySQL, this Book Store WebApp is your digital portal to a world of words. Explore a vast collection of books, from classic literature to contemporary bestsellers.",
     image: BookstoreWebApp,
     tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     source: "https://github.com/Khadalicioso/Full__Stack__Projects",
@@ -184,10 +185,10 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Hotel Booking WebApp",
+    title: "Simple Hotel Booking WebApp",
     date: "September 2024",
     description:
-      "Full Stack Hotel Booking WebApp using HTML, CSS, JavaScript, PHP, and MySQL",
+      "Built with HTML, CSS, JavaScript, PHP, and MySQL, this Hotel Booking WebApp is your passport to unforgettable travel experiences. Effortlessly search, book, and manage your hotel stays, all from the comfort of your device.",
     image: HotelBookingWebApp,
     tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     source: "https://github.com/Khadalicioso/Full__Stack__Projects",
@@ -195,10 +196,10 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Restaurant WebApp",
+    title: "Simple Restaurant WebApp",
     date: "September 2024",
     description:
-      "A Full Stack Restaurant Food Ordering Web Appllication using HTML, CSS, JavaScript, PHP, and MySQL",
+      "Built with HTML, CSS, JavaScript, PHP, and MySQL, this Restaurant WebApp is a powerful tool that streamlines restaurant operations and enhances the customer dining experience, offering features like online ordering, table reservations, loyalty programs, contactless payments, and real-time updates.",
     image: RestaurantWebApp,
     tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     source: "https://github.com/Khadalicioso/Full__Stack__Projects",
@@ -219,10 +220,22 @@ export const projects = [
     id: 7,
     title: "Netflix Clone",
     date: "November 2024",
-    description: "Full Stack Netflix Clone using React JS, Firebase",
+    description:
+      "I built a Netflix Clone using React JS and Firebase, offering a seamless streaming experience right at your fingertips. Dive into a vast library of movies and TV shows, personalized recommendations, and high-quality video streaming.",
     image: NetflixClone,
     tags: ["React JS", "Firebase", "API"],
     source: "https://github.com/Khadalicioso/Full__Stack__Projects",
+    demo: "",
+  },
+  {
+    id: 8,
+    title: "Patient Management System",
+    date: "November 2024 - On Process",
+    description:
+      "A healthcare patient management application that allows patients to easily register, book, and manage their appointments with doctors, featuring administrative tools for scheduling, confirming, and canceling appointments, along with SMS notifications, all built using Next.js.",
+    image: HealthCare,
+    tags: ["Next JS", "TypeScript", "Tailwind CSS", "Appwrite", "Twilio"],
+    source: "",
     demo: "",
   },
 ];
